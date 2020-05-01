@@ -11,7 +11,6 @@
         load_balancer_port: 80
         instance_port: 80
   register: elb
-
 - name: Create EC2 instances
   ec2:
     key_name: Jenkins_demo
