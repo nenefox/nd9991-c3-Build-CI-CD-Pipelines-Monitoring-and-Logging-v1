@@ -2,10 +2,10 @@
   ec2_elb_lb:
     name: "{{ ELBNAME }}"
     state: present
-    region: us-east-2
+    region: us-west-2
     zones:
-      - us-east-2a
-      - us-east-2b
+      - us-west-2a
+      - us-west-2b
     listeners:
       - protocol: http
         load_balancer_port: 80
@@ -16,12 +16,12 @@
   ec2:
     key_name: Jenkins_demo
     instance_type: t2.nano
-    image: ami-0986c2ac728528ac2
+    image: ami-07b4f3c02c7f83d59
     user_data: "{{ USERDATA }}"
-    region: us-east-2
+    region: us-west-2
     group_id:
-      - sg-066324a1f527d72db
-      - sg-0b9990efdf6f50e9d
+      - sg-0fdc759d3ba7ed953
+      - sg-00d78792ebf94e153
     wait: yes
     instance_tags:
       Name: web_server
