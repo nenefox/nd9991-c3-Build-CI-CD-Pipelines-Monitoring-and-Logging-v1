@@ -23,7 +23,7 @@
       - sg-00d78792ebf94e153
     wait: yes
     instance_tags:
-      Name: web_server
+      Name: web_server1
       application: "{{ application }}"
     exact_count: 2
     count_tag:
